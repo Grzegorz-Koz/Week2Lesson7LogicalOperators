@@ -2,8 +2,8 @@
 /*
  *  Program 4-ty z ćwiczeń, z tygodnia "TYDZIEŃ 2" z lekcji "LEKCJA 7 – Operatory Logiczne"
  *  
- *  The logic of finding if the given year is a "leap year" I found in:
- *  https://learn.microsoft.com/pl-pl/office/troubleshoot/excel/determine-a-leap-year
+ *  W tym ćwiczeniu poprzednie, zagłębione instrukcje warunkowe if, zastąpiłem 
+ *  operatorem: Ternary Operator.
  *  
  */
 
@@ -14,38 +14,21 @@ namespace App4
     internal class Program
     {
         static void Main(string[] args)
-        {
-            bool isLeapYear = false;
+        {            
+            Console.WriteLine("Wpisz rok, który chciałbyś sprawdzić:");
             
-            Console.WriteLine("Enter the year you would like to check:");
-            int year = int.Parse(Console.ReadLine());
+            //Lata nie mogą być liczbą mniejszą niż 0:
+            int year = AppsBackend.DataGetter.GetGreaterIntFromString(0);
             
-            string isLeapYearInfo = "The year you entered (" + year + ") is the \"leap year\"";
-            string notLeapYearInfo = "The year you entered (" + year + ") is not the \"leap year\"";
-
-            if ((year % 4) == 0)
-            {
-                if ((year % 100) == 0)
-                {
-                    if ((year % 400) == 0)
-                    {
-                        isLeapYear = true;
-                    }
-                }
-                else
-                {
-                    isLeapYear = true;
-                }
-            }
-
             Console.WriteLine("\r");
-            if (isLeapYear) {
-                Console.WriteLine(isLeapYearInfo);
-            }
-            else
-            {
-                Console.WriteLine(notLeapYearInfo);
-            }            
+            
+            bool isDivisibleBy4NotBy100 = (year % 4) == 0 && !((year % 100) == 0) ? true : false;
+            string isNotLeapYear = isDivisibleBy4NotBy100 ? "" : (year % 400) == 0 ? "" : "nie ";
+            
+            Console.WriteLine($"Rok, który wpisałeś ({year}), {isNotLeapYear}jest rokiem przestępnym.");
+
+            Console.WriteLine("\nAby zakończyć naciśnij dowolny klawisz.");
+            Console.ReadKey();
         }
     }
 }
