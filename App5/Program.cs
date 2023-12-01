@@ -43,7 +43,7 @@ namespace App5
             {
                 bool firstLoop = true;
                 string commaSign;
-                String listOfPositions = "";
+                string listOfPositions = "";
                 int statePositionIndex;
                 foreach (string statePosition in Enum.GetNames(typeof(StatePosition)))
                 {

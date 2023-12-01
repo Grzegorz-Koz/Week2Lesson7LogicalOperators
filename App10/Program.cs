@@ -20,7 +20,7 @@ namespace App10
 
             bool canFormTriangle = 
                 Math.Abs(segments[1] - segments[2]) < segments[0] 
-                         && segments[0] < segments[1] + segments[2] ? true : false;
+                         && segments[0] < segments[1] + segments[2];
 
             Console.WriteLine(canFormTriangle
                 ? "\nZ podanych odcinków można utworzyć trójkąt." 

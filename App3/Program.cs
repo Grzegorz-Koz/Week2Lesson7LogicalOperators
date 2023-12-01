@@ -5,6 +5,8 @@
 *  
 */
 
+using Microsoft.VisualBasic;
+
 namespace App3
 {
     internal class Program
@@ -15,10 +17,13 @@ namespace App3
             Console.WriteLine("Liczba:");
             int intToCheck = AppsBackend.DataGetter.GetIntFromString();
 
-            String isPositive = intToCheck > 0 ? "dodatnia" : "ujemna";
-            Console.WriteLine($"\nPodana liczba jest {isPositive}.");
-
-            Console.WriteLine("\nAby zakończyć naciśnij dowolny klawisz.");
+            string positiveOrNegative = "Podana liczba jest ";
+            string zeroInfo = "Zero nie jest ani dodatnie ani ujemne.";
+                      
+            string checkResult = intToCheck == 0 ? zeroInfo : intToCheck > 0 ? 
+                                 positiveOrNegative + "dodatnia." : positiveOrNegative + "ujemna.";
+                                  
+            Console.WriteLine($"\n{checkResult}");
             Console.ReadKey();
         }
     }

@@ -11,12 +11,12 @@ namespace App12
         private enum WeekDay
         {
             Poniedziałek = 1,
-            Wtorek,
-            Środa,
-            Czwartek,
-            Piątek,
-            Sobota,
-            Niedziela
+            Wtorek = 2,
+            Środa = 3,
+            Czwartek = 4,
+            Piątek = 5,
+            Sobota = 6,
+            Niedziela = 7
         }
         static void Main(string[] args)
         {

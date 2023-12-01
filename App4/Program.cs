@@ -22,7 +22,7 @@ namespace App4
             
             Console.WriteLine("\r");
             
-            bool isDivisibleBy4NotBy100 = (year % 4) == 0 && !((year % 100) == 0) ? true : false;
+            bool isDivisibleBy4NotBy100 = (year % 4) == 0 && !((year % 100) == 0);
             string isNotLeapYear = isDivisibleBy4NotBy100 ? "" : (year % 400) == 0 ? "" : "nie ";
             
             Console.WriteLine($"Rok, który wpisałeś ({year}), {isNotLeapYear}jest rokiem przestępnym.");

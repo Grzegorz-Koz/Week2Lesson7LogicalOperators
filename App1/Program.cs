@@ -14,7 +14,7 @@ namespace App1
             int firstInt = AppsBackend.DataGetter.GetIntFromString();
             Console.WriteLine("Liczba 2:");
             int secondInt = AppsBackend.DataGetter.GetIntFromString();
-            String isEqual = firstInt == secondInt ? "" : "nie ";
+            string isEqual = firstInt == secondInt ? "" : "nie ";
             Console.WriteLine($"\nPodane liczby ({firstInt}, {secondInt}) {isEqual}są równe.");
 
             Console.WriteLine("\nAby zakończyć naciśnij dowolny klawisz.");

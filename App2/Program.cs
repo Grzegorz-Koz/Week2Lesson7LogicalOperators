@@ -15,7 +15,7 @@ namespace App2
             Console.WriteLine("Liczba:");
             int intToCheck = AppsBackend.DataGetter.GetIntFromString();
 
-            String isEvenNumber = (intToCheck % 2) == 0 ? "" : "nie ";
+            string isEvenNumber = (intToCheck % 2) == 0 ? "" : "nie ";
             Console.WriteLine($"\nPodana liczba ({intToCheck}) {isEvenNumber}jest parzysta.");
 
             Console.WriteLine("\nAby zakończyć naciśnij dowolny klawisz.");

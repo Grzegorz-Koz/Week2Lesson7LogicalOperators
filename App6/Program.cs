@@ -15,10 +15,11 @@ namespace App6
         private enum GrowthCategory
         {
             Nie_ma_takiej_kategorii = 0,
-            Niski,
-            Średni,
-            Wysoki
+            Niski = 1,
+            Średni = 2,
+            Wysoki = 3
         }
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Wpisz, jaki masz wzrost (liczbę całkowitą):");
@@ -31,7 +32,7 @@ namespace App6
                 > 175 and <= 200 => GrowthCategory.Wysoki,
                 _ => GrowthCategory.Nie_ma_takiej_kategorii
             };
-            String yourCategory = AppsBackend.DataGetter.SetSpacesInEnum(growthCategory);
+            string yourCategory = AppsBackend.DataGetter.SetSpacesInEnum(growthCategory);
             Console.WriteLine($"\nTwoja kategoria wzrostu, to: \'{yourCategory}\'.");
 
             Console.WriteLine("\nAby zakończyć naciśnij dowolny klawisz.");

@@ -17,20 +17,20 @@ namespace App11
         private enum Grade
         {
             Nie_ma_takiej_oceny = 0,
-            Niedostateczny,
-            Dopuszczający,
-            Dostateczny,
-            Dobry,
-            Bardzo_dobry,
-            Celujący            
-        }
+            Niedostateczny = 1,
+            Dopuszczający = 2,
+            Dostateczny = 3,
+            Dobry = 4,
+            Bardzo_dobry = 5,
+            Celujący = 6            
+        }                
         static void Main(string[] args)
         {
             Console.WriteLine("Wprowadź swoją ocenę (1-6):");
             int grade = AppsBackend.DataGetter.GetIntFromString();                        
             grade = (1 <= grade && grade <= 6) ? grade : 0;
 
-            String yourGrade = AppsBackend.DataGetter.SetSpacesInEnum((Grade)grade);
+            string yourGrade = AppsBackend.DataGetter.SetSpacesInEnum((Grade)grade);
             Console.WriteLine($"\nTwoja ocena to: {yourGrade}");
 
             Console.WriteLine("\nAby zakończyć naciśnij dowolny klawisz.");
